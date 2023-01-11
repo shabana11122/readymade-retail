@@ -1,3 +1,4 @@
+import { TextField } from "@mui/material";
 import { Formik } from "formik";
 import * as Yup from 'yup';
 import "./product.css"
@@ -47,25 +48,26 @@ const SignInForm = () => {
               <p>Please fill in this form to create an account.</p>
               <hr />
               <div>
-                <input type="text" value={values.firstName} placeholder="Please enter first name" onChange={handleChange} name="firstName" required />
+                <TextField id="outlined-basic" label="Outlined" value={values.firstName} placeholder="Please enter first name" onChange={handleChange} name="firstName" variant="outlined" />
                 {errors.firstName && touched.firstName && (
                   <span className="error">{errors.firstName}</span>
                 )}
               </div>
               <div>
-                <input type="text" value={values.lastName} placeholder="Please enter last name" onChange={handleChange} name="lastName" required />
+                <TextField id="outlined-basic" label="Outlined" value={values.lastName} placeholder="Please enter first name" onChange={handleChange} name="firstName" variant="outlined" />
                 {errors.lastName && touched.lastName && (
                   <span className="error">{errors.lastName}</span>
                 )}
               </div>
               <div>
-                <input type="text" value={values.mobile} placeholder="Enter mobile number" onChange={handleChange} name="mobile" required />
+                <TextField id="outlined-basic" label="Outlined" value={values.mobile} placeholder="Enter mobile number" onChange={handleChange} name="mobile"  variant="outlined" />
                 {errors.mobile && touched.mobile && (
                   <span className="error">{errors.mobile}</span>
                 )}
               </div>
               <div>
-                <input type="text" value={values.Email} placeholder="Enter email ID" onChange={handleChange} name="Email" required />
+                {/* <input type="text"  placeholder="Enter email ID" onChange={handleChange} name="Email" required /> */}
+                <TextField id="outlined-basic" label="Outlined" value={values.Email} placeholder="Enter mobile number" onChange={handleChange} name="mobile"  variant="outlined" />
                 {errors.Email && touched.Email && (
                   <span className="error">{errors.Email}</span>
                 )}
